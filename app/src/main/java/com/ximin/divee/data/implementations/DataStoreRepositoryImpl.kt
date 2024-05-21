@@ -7,13 +7,17 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
 import com.ximin.divee.domain.repository.DataStoreRepository
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import javax.inject.Singleton
+
 
 class DataStoreRepositoryImpl(private val context: Context): DataStoreRepository {
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore("preferences")
-
-
 
 
     override suspend fun setValue(key: String, value: Boolean) {
