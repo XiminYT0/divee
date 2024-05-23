@@ -11,4 +11,8 @@ class IsOnboardingPassedGetUseCase(
 
         return dataStoreRepositoryGetValue(DataStoreCase.isOnboardingPassed) ?: false
     }
+
+    fun invoke() {
+        TODO("Not yet implemented")
+    }
 }
