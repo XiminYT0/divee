@@ -53,7 +53,7 @@ dependencies {
     kapt (libs.hilt.compiler)
 
     implementation(libs.androidx.activity.ktx)
-    implementation ("androidx.viewpager2:viewpager2:1.0.0-alpha01")
+    implementation (libs.androidx.viewpager2)
 
 
 

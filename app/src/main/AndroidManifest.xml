@@ -17,14 +17,28 @@
             android:name=".presentation.onboardingActivity.OnboardingActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivitySingIn"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivitySingUp"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivitySingUpEmail"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivitySingInEmail"
+            android:exported="false" />
+        <activity
             android:name=".presentation.mainActivity.MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
