@@ -29,6 +29,15 @@
             android:name=".presentation.onboardingActivity.OnboardingActivitySingInEmail"
             android:exported="false" />
         <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivityVerificationCode"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivityPersonName"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.onboardingActivity.OnboardingActivityLoadingApp"
+            android:exported="false" />
+        <activity
             android:name=".presentation.mainActivity.MainActivity"
             android:exported="true">
 

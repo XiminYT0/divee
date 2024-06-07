@@ -1,5 +1,6 @@
 package com.ximin.divee.presentation.mainActivity
 
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -11,10 +12,18 @@ import com.ximin.divee.R
 import com.ximin.divee.presentation.mainActivity.viewModel.MainActivityViewModel
 import com.ximin.divee.presentation.onboardingActivity.OnboardingActivity
 import dagger.hilt.android.AndroidEntryPoint
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val viewModel: MainActivityViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,3 +44,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+

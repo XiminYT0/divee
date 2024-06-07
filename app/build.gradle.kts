@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -54,6 +55,28 @@ dependencies {
 
     implementation(libs.androidx.activity.ktx)
     implementation (libs.androidx.viewpager2)
+    // AndroidX
+    implementation (libs.androidx.core.ktx.v1100)
+    implementation (libs.androidx.appcompat.v170)
+    implementation (libs.material.v190)
+    implementation (libs.androidx.constraintlayout)
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
+
+    // QR Code Scanner (ZXing)
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+
+    // ViewModel and LiveData
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0")
+
+    // Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+
+    // Testing
+    testImplementation ("junit:junit:4.13.2")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
 
 
 
