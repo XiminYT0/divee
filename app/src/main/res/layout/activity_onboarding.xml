@@ -65,4 +65,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="409dp"
+        android:layout_height="527dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="77dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

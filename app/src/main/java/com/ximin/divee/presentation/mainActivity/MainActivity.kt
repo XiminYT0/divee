@@ -1,6 +1,7 @@
 package com.ximin.divee.presentation.mainActivity
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -12,24 +13,20 @@ import com.ximin.divee.R
 import com.ximin.divee.presentation.mainActivity.viewModel.MainActivityViewModel
 import com.ximin.divee.presentation.onboardingActivity.OnboardingActivity
 import dagger.hilt.android.AndroidEntryPoint
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    val onboarding:Boolean = false
+
     private val viewModel: MainActivityViewModel by viewModels()
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         checkIfOnboardingPassed()
 
-        enableEdgeToEdge()
+        enableEdgeToEdge()                                                                                             
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -38,11 +35,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun checkIfOnboardingPassed(){
-        if (!viewModel.isOnboardingPassed){
+        if (!onboarding){
             startActivity(Intent(this, OnboardingActivity::class.java))
             finish()
         }
+
     }
+
+
+
 }
 
 
