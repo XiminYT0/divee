@@ -19,5 +19,10 @@ class OnboardingActivitySingUpEmail : AppCompatActivity() {
             val intent = Intent(this, OnboardingActivitySingUp::class.java)
             startActivity(intent)
         }
+        val next = findViewById<Button>(com.ximin.divee.R.id.nexn_singin)
+        next.setOnClickListener {
+            val intent = Intent(this, OnboardingActivityPersonName::class.java)
+            startActivity(intent)
+        }
     }
 }

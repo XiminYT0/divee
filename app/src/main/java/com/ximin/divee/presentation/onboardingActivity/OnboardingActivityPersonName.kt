@@ -1,6 +1,7 @@
 package com.ximin.divee.presentation.onboardingActivity
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +19,13 @@ class OnboardingActivityPersonName : AppCompatActivity() {
         toloading.setOnClickListener {
             val intent = Intent(this, OnboardingActivityLoadingApp::class.java)
             startActivity(intent)
-        }
+            val sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE)
+            with(sharedPreferences.edit()) {
+                putBoolean(Constants.ONBOARDING_COMPLETED, true)
+                apply()
+            }
 
+
+        }
     }
 }
