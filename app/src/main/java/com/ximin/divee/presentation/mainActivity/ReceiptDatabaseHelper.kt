@@ -7,7 +7,7 @@ class ReceiptDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
 
     companion object {
         private const val DATABASE_NAME = "receipts.db"
-        private const val DATABASE_VERSION = 3 // Увеличьте версию базы данных
+        private const val DATABASE_VERSION = 3
         const val TABLE_RECEIPTS = "receipts"
         const val TABLE_ITEMS = "items"
         const val TABLE_PEOPLE = "people"

@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val onboardingCompleted = sharedPreferences.getBoolean(Constants.ONBOARDING_COMPLETED, false)
 
         if (!onboardingCompleted) {
-            // Переход на основной экран приложения
+
             startActivity(Intent(this, OnboardingActivity::class.java))
         }
 
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                 setOnClickListener {
                     repository.deleteReceipt(receipt.id)
                     Toast.makeText(this@MainActivity, "Чек удален", Toast.LENGTH_SHORT).show()
-                    recreate() // Обновить экран после удаления
+                    recreate()
                 }
             }
             receiptHeaderLayout.addView(deleteButton)
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
             items.forEach { item ->
                 val itemTextView = TextView(this).apply {
-                    text = "${item.name} - ${item.price} x ${item.quantity} - ${item.personName ?: "Unknown"}"
+                    text = "${item.name} - ${item.price} x ${item.quantity} - ${item.personName ?: "Неизвестно"}"
                     setPadding(32, 8, 32, 8)
                 }
                 linearLayoutReceipts.addView(itemTextView)
